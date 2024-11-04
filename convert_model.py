@@ -1,8 +1,8 @@
-# reconstruct_model.py
-
+"""
+reconstruct the model from h5 format to .keras format
+"""
 import tensorflow as tf
 from tensorflow import keras
-import os
 
 def create_model():
     model = keras.Sequential([
@@ -30,7 +30,7 @@ model = create_model()
 
 # Try to load weights
 try:
-    model.load_weights('model.h5')
+    model.load_weights('full_CNN_model.h5')
     print("Weights loaded successfully.")
 except Exception as e:
     print(f"Error loading weights: {str(e)}")
@@ -40,7 +40,7 @@ model.summary()
 
 # Save in .keras format
 try:
-    model.save('model.keras')
+    model.save('full_CNN_model.keras')
     print("Model saved successfully in .keras format.")
 except Exception as e:
     print(f"Error saving model: {str(e)}")
