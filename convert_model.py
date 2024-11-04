@@ -30,7 +30,7 @@ model = create_model()
 
 # Try to load weights
 try:
-    model.load_weights('full_CNN_model.h5')
+    model.load_weights('model.h5')
     print("Weights loaded successfully.")
 except Exception as e:
     print(f"Error loading weights: {str(e)}")
@@ -40,7 +40,7 @@ model.summary()
 
 # Save in .keras format
 try:
-    model.save('full_CNN_model.keras')
+    model.save('model.keras')
     print("Model saved successfully in .keras format.")
 except Exception as e:
     print(f"Error saving model: {str(e)}")
